@@ -91,6 +91,7 @@ suite("Functional Tests", () => {
         assert.equal(response.status, 200);
         assert.equal(response.body.text, "Some text");
         assert.equal(response.body.translation, "Everything looks good to me!");
+        chai.request(server).get("/");
         done();
       });
   });
